@@ -5,11 +5,11 @@ Template.notifications.helpers({
   notification_count: function(){
   	var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
   	if(notifications.length==0){
-  		return 'No notifications';
+  		return 'Sem notificações';
   	}else if(notifications.length==1){
-  		return '1 notification';
+  		return '1 notificação';
   	}else{
-  		return notifications.length+' notifications';
+  		return notifications.length+' notificações';
   	}
   },
   notification_class: function(){
@@ -25,7 +25,7 @@ Template.notifications.events({
 		$('body').toggleClass('notifications-open');
 	},
 	'click .mark-as-read': function(){
-    Meteor.call('markAllNotificationsAsRead', 
+    Meteor.call('markAllNotificationsAsRead',
       function(error, result){
         error && console.log(error);
       }

@@ -3,14 +3,14 @@
   	{{#with user}}
     {{#if profileIncomplete}}
     <div>
-      Please complete your profile below before continuing.
+      Por favor, complete seu perfil antes de continuar.
     </div>
     {{/if}}
     <form>
-      <h2>Account</h2>
+      <h2>Conta</h2>
       {{#if username}}
       <div class="control-group">
-        <label>Username</label>
+        <label>Usuário</label>
         <div class="controls">
           <input id="username" name="username" disabled="disabled" type="text" value="{{username}}" />
         </div>
@@ -23,7 +23,7 @@
         </div>
       </div> -->
       <div class="control-group">
-        <label>Display Name</label>
+        <label>Nome</label>
         <div class="controls">
           <input name="name" type="text" value="{{profile.name}}" />
         </div>
@@ -35,34 +35,34 @@
         </div>
       </div>
       <div class="control-group">
-        <label>Bio</label>
+        <label>Sobre</label>
         <div class="controls"><textarea name="bio" type="text">{{profile.bio}}</textarea></div>
       </div>
-      <h3>Change Password?</h3>
+      <h3>Mudar senha?</h3>
       <div class="control-group">
-        <label>Old Password</label>
+        <label>Senha antiga</label>
         <div class="controls"><input name="old_password" type="text" value="" /></div>
       </div>
       <div class="control-group">
-        <label>New Password</label>
+        <label>Nova senha</label>
         <div class="controls"><input name="new_password" type="text" value="" /></div>
       </div>
           <div class="control-group">
-            <label class="control-label">Email Notifications</label>
+            <label class="control-label">Notificações por email</label>
             <div class="controls">
               <label class="radio">
-                <input id="notifications_activity" type="radio" value="1" name="notifications" {{hasNotificationsActivity}} /> When people reply to me
+                <input id="notifications_activity" type="radio" value="1" name="notifications" {{hasNotificationsActivity}} /> Quando pessoas me respondem
               </label>
               <label class="radio">
-                <input id="notifications_none" type="radio" value="0" name="notifications" {{hasNotificationsNone}} /> None
+                <input id="notifications_none" type="radio" value="0" name="notifications" {{hasNotificationsNone}} /> Nenhum
               </label>
-<!--               <label class="radio">  
+<!--               <label class="radio">
                 <input id="notifications_all" type="radio" value="2" name="notifications" {{hasNotificationsAll}} /> All
               </label> -->
             </div>
           </div>
       <div class="form-actions">
-        <a href="/forgot_password">Forgot password?</a>
+        <a href="/forgot_password">Esqueceu a senha?</a>
         <input type="submit" class="button" value="Submit" />
       </div>
     </form>
